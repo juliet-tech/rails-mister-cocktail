@@ -3,9 +3,9 @@
     <h1>Create the cocktail of your dreams</h1>
   </div>
   <div class="form">
-    <%= simple_form_for @cocktails do |f| %>
-    <%= f.input :name %>
+    <%= simple_form_for @cocktail do |f| %>
+      <%= f.input :name, label: "What's the name of your baby?", placeholder: "Clara Smash" %>
+      <%= f.submit %>
     <% end %>
   </div>
-  <h4><%= link_to "Add an ingredient", new_cocktail_dose %></h4>
 </div>

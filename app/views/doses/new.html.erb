@@ -1,2 +1,9 @@
-<h1>Doses#new</h1>
-<p>Find me in app/views/doses/new.html.erb</p>
+<h1><%= @cocktail.name  %></h1>
+
+<div class="form">
+  <%= simple_form_for [ @cocktail, @dose ] do |f| %>
+    <%= f.association :ingredient, label: "Select your poison", placeholder: "Blueberry Gin" %>
+    <%= f.input :description, label: "Give it a recipe", placeholder: "4cl after the first sip" %>
+    <%= f.submit "Add your cocktail recipe" %>
+  <% end %>
+</div>
