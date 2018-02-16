@@ -155,7 +155,11 @@ h1 {
   color: white;
 }
 
-
+label {
+  color: white;
+  font-family: 'Arapey';
+  font-size: 25px;
+}
 
 .wrapper-show {
   position: relative;
@@ -174,4 +178,8 @@ h1 {
   position: absolute;
   top: 15px;
   right: 34px;
+}
+
+.form {
+  width: 300px;
 }
