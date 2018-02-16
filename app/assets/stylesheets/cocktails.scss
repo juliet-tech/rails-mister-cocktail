@@ -2,8 +2,9 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 body {
-  background-color: #351F39;
+  background-color: #352b30;
 }
+
 
 h1 {
   color: #FFF;
@@ -25,6 +26,7 @@ h1 {
   width: 100vw;
   height: 100vh;
   margin: 0;
+  position: relative;
 }
 
 .title h1 {
@@ -37,10 +39,9 @@ h1 {
 .create-menu {
   display: flex;
   justify-content: flex-end;
-  top: 20px;
   position: absolute;
-  left: 550px;
   top: 25px;
+  right: 20px;
 }
 
 .btn-primary {
@@ -55,6 +56,85 @@ h1 {
 }
 
 .black-line {
-  background-color: black;
+  background-color: #141213;
   padding: 30px;
+  margin: 370px 0 0 0;
 }
+
+.black-line h4 {
+  font-family: 'Poiret One';
+  font-weight: lighter;
+  text-align: center;
+  color: #fff;
+  letter-spacing: 2px;
+  font-size: 30px;
+  padding: 40px;
+}
+
+.wrapper {
+  margin: 0;
+  padding: 0;
+}
+
+.cards-container {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  align-content: center;
+  margin-right: 35px;
+  margin-left: 35px;
+  margin-top: 140px;
+}
+
+.card {
+  height: 175px;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.6);
+  background-size: cover !important;
+  background-position: center;
+  color: white;
+  position: relative;
+  width: 250px;
+  display: inline-block;
+  font-family: 'Poiret One';
+}
+.card-user {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  width: 40px;
+  border-radius: 50%;
+}
+.card-category {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 15px;
+  text-transform: uppercase;
+}
+.card-description {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+}
+.card-description h2 {
+  font-size: 24px;
+}
+.card-description p {
+  font-size: 14px;
+  opacity: 0.7;
+  font-weight: lighter;
+}
+.card-link {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  z-index: 2;
+  background: black;
+  opacity: 0;
+}
+.card-link:hover {
+  opacity: 0.1;
+}
+

@@ -1,18 +1,23 @@
+<div class="wrapper">
   <div class="title">
     <h1>Cocktails</h1>
 
     <div class="btn btn-primary create-menu">
       <%= link_to "Create your own baby", new_cocktail_path %>
     </div>
-  </div>
-<div class="black-line">
+    <div class="black-line">
+      <h4>Pick your favorite 🔥</h4>
+    </div>
 
-</div>
+  </div>
   <div class="cards-container">
     <% @cocktails.each do |cocktail| %>
-    <div class="card">
-      <%= link_to cocktail.name, cocktail_path(cocktail) %>
-    </div>
+      <div class="card">
+        <%= link_to cocktail.name, cocktail_path(cocktail) %>
+      </div>
     <% end %>
   </div>
+
+</div>
+
 
