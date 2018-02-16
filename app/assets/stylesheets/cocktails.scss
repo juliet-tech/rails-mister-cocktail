@@ -1,0 +1,60 @@
+// Place all the styles related to the Cocktails controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+body {
+  background-color: #351F39;
+}
+
+h1 {
+  color: #FFF;
+  font-family: 'Lobster Two';
+  text-align: center;
+  font-weight: bold;
+}
+
+.btn a {
+  color: white;
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.title {
+  background-image: url('david-straight-341873.jpg');
+  background-size: cover;
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+}
+
+.title h1 {
+  font-size: 50px;
+  display: flex;
+  align-self: flex-end;
+  padding: 10px;
+}
+
+.create-menu {
+  display: flex;
+  justify-content: flex-end;
+  top: 20px;
+  position: absolute;
+  left: 550px;
+  top: 25px;
+}
+
+.btn-primary {
+  background-color: #E7455F;
+  border: none;
+  font-family: 'Arapey';
+  opacity: .8;
+  &:hover {
+    opacity: 1;
+    background-color: #E7455F;
+  }
+}
+
+.black-line {
+  background-color: black;
+  padding: 30px;
+}
