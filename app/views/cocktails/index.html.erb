@@ -1,13 +1,13 @@
-
-
-<div class="container">
   <div class="title">
-    <h1>Cocktail party🍹</h1>
-  </div>
-  <div class="btn btn-success">
-    <%= link_to "Create your own baby", new_cocktail_path %>
-  </div>
+    <h1>Cocktails</h1>
 
+    <div class="btn btn-primary create-menu">
+      <%= link_to "Create your own baby", new_cocktail_path %>
+    </div>
+  </div>
+<div class="black-line">
+
+</div>
   <div class="cards-container">
     <% @cocktails.each do |cocktail| %>
     <div class="card">
@@ -15,4 +15,4 @@
     </div>
     <% end %>
   </div>
-</div>
+
