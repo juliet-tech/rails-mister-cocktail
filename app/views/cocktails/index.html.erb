@@ -12,7 +12,9 @@
   <div class="cards-container">
     <% @cocktails.each do |cocktail| %>
       <div class="card", style="background-image: url('http://<%= cocktail.img_url %>')">
+        <div class="card-description">
         <h6><%= link_to cocktail.name, cocktail_path(cocktail) %></h6>
+        </div>
       </div>
     <% end %>
   </div>
