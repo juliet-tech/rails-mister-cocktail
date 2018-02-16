@@ -6,7 +6,7 @@
     <% @cocktail.doses.each do |c|  %>
       <h3><%= c.ingredient.name %></h3>
       <p><%= c.description %></p>
-      <h5><%= link_to "Delete", dose_path(c), method: :delete %></h5>
+      <%= link_to "Delete", dose_path(c), method: :delete %>
     <% end %>
   </div>
   <div class="btn btn-primary">

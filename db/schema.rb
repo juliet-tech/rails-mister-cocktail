@@ -12,12 +12,12 @@
 
 ActiveRecord::Schema.define(version: 20180215104605) do
 
-
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "cocktails", force: :cascade do |t|
     t.string "name"
+    t.string "img_url"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -40,5 +40,4 @@ ActiveRecord::Schema.define(version: 20180215104605) do
 
   add_foreign_key "doses", "cocktails"
   add_foreign_key "doses", "ingredients"
-
 end
