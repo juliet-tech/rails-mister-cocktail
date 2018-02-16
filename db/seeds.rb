@@ -8,6 +8,7 @@
 
 require 'json'
 require 'open-uri'
+require 'faker'
 
 url = 'http://www.thecocktaildb.com/api/json/v1/1/list.php?i=list'
 user_serialized = open(url).read
@@ -15,7 +16,7 @@ cocktail_list = JSON.parse(user_serialized)
 ingredients_list = cocktail_list["drinks"]
 
 ingredients_list.each do |ingredient|
-  Ingredient.create(name: ingredient["strIngredient1"])
+  i = Ingredient.create(name: ingredient["strIngredient1"])
 end
 
 
@@ -25,8 +26,14 @@ image_api = JSON.parse(image_serialized)
 image_list = image_api["drinks"]
 
 image_list.each do |cocktail|
-  Cocktail.create(name: cocktail["strDrink"], img_url: cocktail["strDrinkThumb"])
+  c = Cocktail.create(name: cocktail["strDrink"], img_url: cocktail["strDrinkThumb"])
+  Dose.create(
+    description: Faker::GameOfThrones.character,
+    cocktail: c,
+    ingredient: Ingredient.all.sample
+  )
 end
+
 
 
 # json = open("http://www.thecocktaildb.com/api/json/v1/1/filter.php?i=Gin").read

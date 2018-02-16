@@ -1,15 +1,17 @@
-<div class="wrapper">
-  <div class="title" style="background-image: url('<%= @cocktail.img_url %>')">
+<div class="wrapper-show">
+  <div class="title-show">
     <h1><%= @cocktail.name %></h1>
   </div>
+  <div class="cocktail-img" style="background-image: url('http://<%= @cocktail.img_url %>')">
+  </div>
   <div class="dosage-info">
-    <% @cocktail.doses.each do |c|  %>
-      <h3><%= c.ingredient.name %></h3>
-      <p><%= c.description %></p>
-      <%= link_to "Delete", dose_path(c), method: :delete %>
+    <% @cocktail.doses.each do |dose|  %>
+      <h3><%= dose.ingredient.name %></h3>
+      <p><%= dose.description %></p>
+      <%= link_to "Delete", dose_path(dose), method: :delete %>
     <% end %>
   </div>
-  <div class="btn btn-primary">
+  <div class="btn btn-primary btn-show">
     <%= link_to "Add an ingredient to your magic recipe", new_cocktail_dose_path(@cocktail) %>
   </div>
 </div>

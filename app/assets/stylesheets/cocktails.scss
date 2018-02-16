@@ -87,13 +87,13 @@ h1 {
 }
 
 .card {
-  height: 175px;
+  height: 250px;
   text-shadow: 0 1px 3px rgba(0,0,0,0.6);
   background-size: cover !important;
   background-position: center;
   color: white;
   position: relative;
-  width: 250px;
+  width: 345px;
   display: inline-block;
   font-family: 'Poiret One';
   margin-bottom: 25px;
@@ -151,3 +151,27 @@ h1 {
   opacity: 0.1;
 }
 
+.dosage-info h3 {
+  color: white;
+}
+
+
+
+.wrapper-show {
+  position: relative;
+}
+
+.cocktail-img {
+  width: 300px;
+  height: 300px;
+  background-size: cover;
+  border-radius: 10px;
+  position: absolute;
+  right: 25px;
+}
+
+.button-show {
+  position: absolute;
+  top: 15px;
+  right: 34px;
+}
