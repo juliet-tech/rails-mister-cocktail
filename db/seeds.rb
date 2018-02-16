@@ -5,6 +5,7 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
 require 'json'
 require 'open-uri'
 
@@ -25,5 +26,4 @@ cocktailsname_list = list_api["drinks"]
 cocktailsname_list.each do |cocktail|
   Cocktail.create(name: cocktail["strDrink"])
 end
-
 
