@@ -1,14 +1,18 @@
-<div class="container">
-  <div class="title">
-    <h1>Create the cocktail of your dreams</h1>
-    <h1><i class="fas fa-bars"></i></h1>
+  <div class="title-show">
+    <!-- <h1><i class="fas fa-bars"></i></h1> -->
+    <h1>Create the cocktail of your dreams 🍹</h1>
   </div>
-  <div class="col-sm-6 col-sm-offset">
-    <div class="form">
+<div class="container">
+  <div class="row">
+  <div class="col-md-4 col-md-offset-4">
+    <!-- <div class="form"> -->
       <%= simple_form_for @cocktail do |f| %>
       <%= f.input :name, label: "What's the name of your baby?", placeholder: "Clara Smash" %>
-      <%= f.submit %>
+      <%= f.input :img_url %>
+      <%= f.input :img_url_cache, as: :hidden %>
+      <%= f.submit class: 'btn btn-warning' %>
       <% end %>
-    </div>
+    <!-- </div> -->
+  </div>
   </div>
 </div>

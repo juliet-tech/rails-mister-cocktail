@@ -26,7 +26,7 @@ image_api = JSON.parse(image_serialized)
 image_list = image_api["drinks"]
 
 image_list.each do |cocktail|
-  c = Cocktail.create(name: cocktail["strDrink"], img_url: cocktail["strDrinkThumb"])
+  c = Cocktail.new(name: cocktail["strDrink"]), img_url: cocktail["strDrinkThumb"])
   Dose.create(
     description: Faker::GameOfThrones.character,
     cocktail: c,
